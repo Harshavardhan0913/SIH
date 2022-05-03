@@ -1,0 +1,72 @@
+body{
+    background-image: url('../hero-bg.png');
+    position: relative;
+}
+.inner{
+    padding-left: 50px;
+    float: left;
+}
+.outer{
+    width: 1200px;
+}
+
+.inner_heading{
+    width: 70%;
+    float: left;
+    text-align: center;
+}
+.heading{
+    padding-top: 50px;
+    float: left;
+    color: white;
+}
+.heading :hover{
+    color: yellow;
+}
+.heading h1{
+    font-size: 60px;
+}
+.heading h4{
+    font-size: 40px;
+}
+.header{
+    width:100%;
+    background-position:center;
+    background-size:cover;
+    position: relative;
+}
+marquee{
+    position: relative;
+    top: 50px;
+    left:50px;
+}
+li{
+    float: left;
+}
+nav img{
+    width: 100px;
+}
+.lin{
+    text-align: right;
+}
+.lin ul li{
+    list-style: none;
+    display: block;
+    padding: 8px 12px;
+    position: relative;
+}
+.lin ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.lin ul li:hover{
+    color: orange;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+.lin ul li a:hover{
+    color:red;
+}
+
+

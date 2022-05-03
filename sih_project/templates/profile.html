@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="../static/CSS/styles_profile.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search & Select</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/CSS/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+</head>
+<body>
+    <div><header>
+        <nav>
+            <div class="lin">
+                <ul>
+                    <li><a href="/"><img src="../static/Dallas_Mavericks_logo.svg.png"></a></li>
+                    <li><a href="/hackathon">Hackathon</a></li>
+                    <li><a href="/workshops">Workshops</a></li>
+                    <li><a href="#">Internships</a></li>
+                    <li><a href="#">Conferences</a></li>
+                    <li><a href="/profile">Profile</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+    <div class="row">
+    <div class="col-12">
+        <!-- Page title -->
+        <div class="my-5">
+            <h2 style="text-align: center">My Profile</h2>
+            <hr>
+        </div>
+        <!-- Form START -->
+        <div class="container">
+        <form class="file-upload">
+            <div class="row mb-5 gx-5">
+                <!-- Contact detail -->
+                <div class="col-xxl-8 mb-5 mb-xxl-0">
+                    <div class="bg-secondary-soft px-4 py-5 rounded">
+                        <div class="form-row">
+                            <h4 class="mb-4 mt-0">Contact detail</h4>
+                            <!-- First Name -->
+                            <div class="form-group col-md-6">
+                                <label class="form-label">First Name *</label>
+                                <input type="text" class="form-control" placeholder="" aria-label="First name">
+                            </div>
+                            <!-- Last name -->
+                            <div class="form-group col-md-6">
+                                <label class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" placeholder="" aria-label="Last name">
+                            </div>
+                            <!-- Phone number -->
+                            <div class="form-group col-md-6">
+                                <label class="form-label">Phone number *</label>
+                                <input type="text" class="form-control" placeholder="" aria-label="Phone number">
+                            </div>
+                            <!-- Mobile number -->
+                            <div class="form-group col-md-6">
+                                <label class="form-label">Mobile number *</label>
+                                <input type="text" class="form-control" placeholder="" aria-label="Phone number">
+                            </div>
+                            <!-- Email -->
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                            </div>
+                            <!-- Skype -->
+                            <div class="form-group col-md-6">
+                                <label class="form-label">University *</label>
+                                <input type="text" class="form-control" placeholder="" aria-label="Phone number">
+                            </div>
+                        </div> <!-- Row END -->
+                    </div>
+                </div>
+                <!-- Upload profile -->
+
+            </div> <!-- Row END -->
+
+            <!-- Social media detail -->
+            <div class="form row mb-5 gx-5">
+                <div class="form-group col-xxl-6 mb-5 mb-xxl-0">
+                    <div class="bg-secondary-soft px-4 py-5 rounded">
+                        <div class="select-item-list--single">
+                            <h4>Interests</h4>
+                            <div class="directorist-select directorist-select-multi" id="multiSelect" data-isSearch="true"  data-multiSelect="['hackathons', 'codathons', 'webinars', 'conference','workshops']" >
+                                <input type="hidden">
+                            </div>
+                        </div>
+
+                        </div> <!-- Row END -->
+                    </div>
+                </div>
+
+                <!-- change password -->
+                <div class="form-group col-xxl-6">
+                    <div class="bg-secondary-soft px-4 py-5 rounded">
+                        <div class="row g-3">
+                            <h4 class="my-4">Change Password</h4>
+                            <button type="button" class="btn btn-primary btn-sg">Change Password</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            <!-- button -->
+            <div class="gap-3 d-md-flex justify-content-md-end text-center">
+
+                <button type="button" class="btn btn-primary btn-lg">Update profile</button>
+            </div>
+        </form> <!-- Form END -->
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="../static/script.js"></script>
+    <script>
+    // pureScriptSelect('#select');
+    pureScriptSelect('#multiSelect');
+    </script>
+</body>
+</html>

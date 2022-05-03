@@ -1,0 +1,239 @@
+<html>
+    <head>
+        <title>Welcome</title>
+        <link rel="stylesheet" href="../static/CSS/style.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          function newFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            position: relative;
+        }
+        header {
+            width: 100%;
+            height: 50px;
+        }
+        .view {
+            display: grid;
+            grid-template-columns: 20% 70%;
+            margin-top : 80px;
+            margin-left: 20px;
+        }
+        
+        .dropbtn {
+            background-color: transparent;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+  
+        .dropbtn:hover, .dropbtn:focus {
+            color: black;
+        }
+  
+
+        
+  
+        .dropdown-content {
+            display: none;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+  
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+  
+        .dropdown-content a:hover {
+            background-color: #ddd
+        }
+  
+        .show {
+            display:block;
+        }
+        .items {
+            background-color: lightgrey;
+            margin: 5px;
+            padding: 10px;
+            border: solid 1px black;
+            border-radius: 5px;
+            color: red;
+            height: 260px;
+        }
+        .items > div > h3 {
+            text-align: left;
+        }
+        hr {
+            border: 1px solid whilered
+        }
+        .apply {
+            position:relative; right:0;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            border-color: white;
+            margin-top: 10px;
+            margin-left: 90%;
+            
+        }
+        th {
+            margin-bottom: 10px;
+            text-align: left; 
+            font-size: x-large;
+            border-bottom: solid 1px black;
+        }
+        tbody :first-child  {
+            padding-bottom: 10px;
+        }
+        #myInput {
+            background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+            background-position: 10px 12px; /* Position the search icon */
+            background-repeat: no-repeat; /* Do not repeat the icon image */
+            width: 100%; /* Full-width */
+            font-size: 16px; /* Increase font-size */
+            padding: 12px 20px 12px 40px; /* Add some padding */
+            border: 1px solid #ddd; /* Add a grey border */
+            margin-bottom: 12px; /* Add some space below the input */
+          }
+          
+          #myUL {
+            /* Remove default list styling */
+            list-style-type: none;
+            display: block;
+            padding: 0;
+            margin: 0;
+            width: 130px;
+            height: 100%;
+          }
+          
+          #myUL  li  a {
+            border: 1px solid #ddd; /* Add a border to all links */
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6; /* Grey background color */
+            width: 240px;
+            padding: 12px; /* Add some padding */
+            text-decoration: none; /* Remove default text underline */
+            font-size: 18px; /* Increase the font-size */
+            color: black; /* Add a black text color */
+            display: block; /* Make it into a block element to fill the whole list */
+          }
+          #myUL li a:hover:not(.header) {
+            background-color: #eee; /* Add a hover effect to all links, except for headers */
+            width: 240px;
+          }
+          table {
+              width: 100%;
+              height:120px;
+          }
+    </style>
+    <body>
+        <div><header>
+        <nav>
+            <div class="lin">
+                <ul>
+                    <li><a href="/"><img src="../static/Dallas_Mavericks_logo.svg.png"></a></li>
+                    <li><a href="#">Workshops</a></li>
+                    <li><a href="/hackathon">Hackathon</a></li>
+                    <li><a href="#">Internships</a></li>
+                    <li><a href="#">Conferences</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    </div>
+    <div class = "view">
+        
+        <div>
+            <div>
+            <input type="text" id="myInput" onkeyup="newFunction()" placeholder="Search for names.." title="Type in a name">
+            
+            <ul id="myUL">
+                <li><a href="#">Hyderabad</a></li>
+                <li><a href="#">Banglore</a></li>
+                <li><a href="#">Chennai</a></li>
+                <li><a href="#">Pune</a></li>
+                
+            </ul>
+          
+            </div>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><i class="fa fa-sort-amount-asc"></i> Sort</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Date</a>
+                    <a href="#">Location</a>
+                </div>
+            </div>
+            
+        </div>
+        {% if l != 0 %}
+        {% for d in hackathons %}
+        <div class = "items">
+                <table>
+                    <tr>
+                        <th>
+                            Hackathon Name:{{ d['name'] }}
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Date: {{ d['date'] }} </td>
+                    </tr>
+                    <tr><td>Location: {{ d['location'] }} </td>
+                    </tr>
+                    <td>
+                    </td>
+    
+                </table>
+                <button type="button" class="apply"> Apply now </button>
+            
+            
+        </div>
+            <div></div>
+        {% endfor %}
+        {% endif %}
+
+    </div>
+    </body>
+</html>

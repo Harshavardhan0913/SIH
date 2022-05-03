@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Welcome</title>
+        <link rel="stylesheet" href="../static/CSS/style.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+    </script>
+    <style>
+
+    </style>
+    <body>
+        <div><header>
+        <nav>
+            <div class="lin">
+                <ul>
+                    <li><a href="/"><img src="../static/Dallas_Mavericks_logo.svg.png"></a></li>
+                    <li><a href="#">Hackathons</a></li>
+                    <li><a href="#">Internships</a></li>
+                    <li><a href="#">Codeathons</a></li>
+                    <li><a href="#">Conferences</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    </div>
+    <div class = "view">
+
+        <div>
+            <button class="btn"> <i class="fa fa-filter"> FILTER</i></button><br>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><i class="fa fa-sort-amount-asc"></i> Sort</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Date</a>
+                    <a href="#">Location</a>
+
+                </div>
+            </div>
+
+        </div>
+        <div class = "items">
+            <div>
+                <h3>Workshop Name</h3>
+                <table>
+                    <tr>
+                        <td>Date: </td>
+                    </tr>
+                    <tr><td>Location: </td>
+                    </tr>
+                </table>
+                <hr>
+                workshop details workshop details
+                workshop details workshop details
+                workshop details workshop details
+                workshop details workshop details
+                <button type="button" class="apply"> Apply now </button>
+            </div>
+
+        </div>
+    </div>
+    </body>
+</html>
